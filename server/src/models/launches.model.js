@@ -13,10 +13,26 @@ const launch = {
 
 launches.set(launch.flightNumber, launch);
 
+let latestFlightNumber = 100;
+
 function getAllLaunches() {
   return Array.from(launches.values());
 }
 
+function addNewLaunch(launch) {
+  latestFlightNumber += 1;
+  launches.set(
+    latestFlightNumber,
+    Object.assign(launch, {
+      success: true,
+      upcoming: true,
+      customers: ["ZTM", "NASA"],
+      flightNumber: latestFlightNumber,
+    })
+  );
+}
+
 module.exports = {
   getAllLaunches,
+  addNewLaunch,
 };
