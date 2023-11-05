@@ -32,7 +32,16 @@ function addNewLaunch(launch) {
   );
 }
 
+function abortLaunch(id) {
+  const aborted = launches.get(id);
+  console.log(aborted);
+  aborted.upcoming = false;
+  aborted.success = false;
+  return aborted;
+}
+
 module.exports = {
   getAllLaunches,
   addNewLaunch,
+  abortLaunch,
 };
