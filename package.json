@@ -25,6 +25,7 @@
   "homepage": "https://github.com/christian-naykene/nasa-mission-control#readme",
   "dependencies": {
     "arwes": "^1.0.0-alpha.23",
+    "mongoose": "^8.0.3",
     "morgan": "^1.10.0"
   }
 }
