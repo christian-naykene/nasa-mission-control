@@ -57,7 +57,7 @@ describe("Test GET /launches", () => {
       .expect(400);
 
     expect(response.body).toEqual({
-      error: "Invalid launch date",
+      error: "Invalid launch date!",
     });
   });
 });
