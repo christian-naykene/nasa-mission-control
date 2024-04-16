@@ -15,5 +15,6 @@ jobs:
           node-version: '21'
       - name: Authenticate with private NPM package
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
       - run: npm install
       - run: npm run build --prefix client
